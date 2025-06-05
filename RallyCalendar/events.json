@@ -1,11 +1,119 @@
 [
   {
-    "Name": "srat",
-    "Description": "",
-    "Hours": 12,
-    "Minutes": 12,
-    "Day": 2,
+    "Name": "Rallye Monte-Carlo",
+    "Description": "Opening round of the 2025 WRC season.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 23,
+    "Month": 1,
+    "Year": 2025
+  },
+  {
+    "Name": "Rally Sweden",
+    "Description": "Snow and ice rally in Sweden.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 13,
+    "Month": 2,
+    "Year": 2025
+  },
+  {
+    "Name": "Safari Rally Kenya",
+    "Description": "Africa's legendary rough terrain rally.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 13,
+    "Month": 3,
+    "Year": 2025
+  },
+  {
+    "Name": "Rally Croatia",
+    "Description": "Tarmac rally in Croatia.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 17,
+    "Month": 4,
+    "Year": 2025
+  },
+  {
+    "Name": "Rally Portugal",
+    "Description": "Gravel rally in Portugal.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 8,
+    "Month": 5,
+    "Year": 2025
+  },
+  {
+    "Name": "Rally Italia Sardegna",
+    "Description": "Rough gravel stages in Sardinia.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 29,
+    "Month": 5,
+    "Year": 2025
+  },
+  {
+    "Name": "Rally Poland",
+    "Description": "Fast gravel stages in Poland.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 19,
     "Month": 6,
+    "Year": 2025
+  },
+  {
+    "Name": "Rally Latvia",
+    "Description": "New addition to the WRC calendar.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 10,
+    "Month": 7,
+    "Year": 2025
+  },
+  {
+    "Name": "Rally Finland",
+    "Description": "Famous for high speeds and jumps.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 31,
+    "Month": 7,
+    "Year": 2025
+  },
+  {
+    "Name": "Acropolis Rally Greece",
+    "Description": "Rocky mountain stages in Greece.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 28,
+    "Month": 8,
+    "Year": 2025
+  },
+  {
+    "Name": "Rally Chile",
+    "Description": "Gravel rally in South America.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 25,
+    "Month": 9,
+    "Year": 2025
+  },
+  {
+    "Name": "Central European Rally",
+    "Description": "Multi-country tarmac rally.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 23,
+    "Month": 10,
+    "Year": 2025
+  },
+  {
+    "Name": "Rally Japan",
+    "Description": "Season finale on Japanese tarmac.",
+    "Hours": 9,
+    "Minutes": 0,
+    "Day": 20,
+    "Month": 11,
     "Year": 2025
   }
 ]
