@@ -243,7 +243,7 @@ namespace RallyCalendar
             daysPanel.Controls.Clear();
             daysPanel.RowStyles.Clear();
 
-            int days = DateTime.DaysInMonth(currentYear + 1, currentMonth + 1);
+            int days = DateTime.DaysInMonth(currentYear, currentMonth);
             int rows = (int)Math.Ceiling(days / 7.0);
             daysPanel.RowCount = rows;
 
