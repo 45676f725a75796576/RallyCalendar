@@ -25,8 +25,8 @@ namespace RallyCalendar
         private Label weatherLabel;
         private Panel bottomBar;
         private Label messageLabel;
-        private int currentYear;
-        private int currentMonth;
+        private int currentYear = 2025;
+        private int currentMonth = 6;
         private string BGImagePath = "..\\..\\..\\bg-image.jpg";
 
 
