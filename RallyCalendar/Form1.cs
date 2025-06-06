@@ -16,6 +16,7 @@ namespace RallyCalendar
         private Panel topBar;
         private Button calendarButton;
         private Button weatherButton;
+        private Button gameButton;
         private Panel calendarPanel;
         private Button prevMonthButton;
         private Button nextMonthButton;
@@ -23,6 +24,9 @@ namespace RallyCalendar
         private TableLayoutPanel daysPanel;
         private Panel weatherPanel;
         private Label weatherLabel;
+        private Panel gamePanel;
+        private Button gameButtonA;
+        private Button gameButtonB;
         private Panel bottomBar;
         private Label messageLabel;
         private int currentYear = 2025;
@@ -43,6 +47,7 @@ namespace RallyCalendar
             InitializeWeatherPanel();
             InitializeDaysPanel();
             InitializeCalendarMenu();
+            InitializeGamePanel();
             InitializeTopBar();
             InitializeBottomBar();
 
@@ -63,6 +68,7 @@ namespace RallyCalendar
             Controls.SetChildIndex(calendarPanel, 2);
             Controls.SetChildIndex(topBar, 3);
             Controls.SetChildIndex(bottomBar, 4);
+            Controls.SetChildIndex(gamePanel, 5);
         }
 
         protected override async void OnLoad(EventArgs e)
@@ -97,8 +103,18 @@ namespace RallyCalendar
             };
             weatherButton.Click += (s, e) => ShowWeatherPanel();
 
+            gameButton = new Button
+            {
+                Text = "Game",
+                Left = 230,
+                Top = 5,
+                Width = 100
+            };
+            gameButton.Click += (s, e) => ShowGamePanel();
+
             topBar.Controls.Add(calendarButton);
             topBar.Controls.Add(weatherButton);
+            topBar.Controls.Add(gameButton);
             Controls.Add(topBar);
         }
 
@@ -184,7 +200,7 @@ namespace RallyCalendar
 
         private async Task InitializeWeatherPanel()
         {
-            weatherPanel = new Panel
+            weatherPanel = new TableLayoutPanel
             {
                 Dock = DockStyle.Fill,
                 Visible = false
@@ -200,20 +216,57 @@ namespace RallyCalendar
             Controls.Add(weatherPanel);
         }
 
+        private void InitializeGamePanel()
+        {
+            gamePanel = new TableLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                Visible = false
+            };
+            gameButtonA = new Button
+            {
+                Text = "A",
+                Width = 30
+            };
+            var gameLabel = new Label
+            {
+                Text = "WIP",
+                Dock = DockStyle.Fill,
+                Font = new Font("Segoe UI", 16, FontStyle.Bold),
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+            gamePanel.Controls.Add(gameButtonA);
+            gamePanel.Controls.Add(gameButtonA);
+            gamePanel.Controls.Add(gameLabel);
+            Controls.Add(gamePanel);
+        }
+
         private void ShowCalendarMenu()
         {
             bool show = !calendarPanel.Visible;
             calendarPanel.Visible = show;
             daysPanel.Visible = show;
             weatherPanel.Visible = false;
+            gamePanel.Visible = false;
             UpdateMonthYearLabel();
         }
 
         private void ShowWeatherPanel()
         {
-            weatherPanel.Visible = true;
+            bool show = !weatherPanel.Visible;
+            weatherPanel.Visible = show;
             daysPanel.Visible = false;
             calendarPanel.Visible = false;
+            gamePanel.Visible = false;
+        }
+
+        private void ShowGamePanel()
+        {
+            bool show = !gamePanel.Visible;
+            gamePanel.Visible = show;
+            daysPanel.Visible = false;
+            calendarPanel.Visible = false;
+            weatherPanel.Visible = false;
         }
 
         private void ChangeMonth(int delta)
