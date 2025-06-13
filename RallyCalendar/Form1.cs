@@ -307,12 +307,23 @@ namespace RallyCalendar
 
             for (int i = 0; i < days; i++)
             {
+                bool hasEvent = false;
+                foreach (var e in allEvents)
+                {
+                    if (
+                    e.Day-1 == i && e.Year == currentYear && e.Month == currentMonth)
+                    {
+                        hasEvent = true;
+                    }
+                }
+                Color b_color = (hasEvent)? Color.Green : Color.White;
                 var dayButton = new Button
                 {
                     Text = (i + 1).ToString(),
                     Width = 40,
                     Height = 40,
-                    Margin = new Padding(5)
+                    Margin = new Padding(5),
+                    BackColor = b_color
                 };
                 dayButton.Click += DayButton_Click;
                 daysPanel.Controls.Add(dayButton, i % 7, i / 7);
